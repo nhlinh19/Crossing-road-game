@@ -7,7 +7,7 @@
 class People
 {
 private:
-	std::string filename = "C:\\Users\\admin\\source\\repos\\CS202\\Debug\\game_of_throne.png";
+	std::string filename = "C:\\Users\\admin\\source\\repos\\CS202\\Debug\\stickman.png";
 	sf::Sprite player;
 	sf::Texture playerTexture;
 	sf::Vector2f velocity;
@@ -26,6 +26,7 @@ public:
 People::People() {
 	playerTexture.loadFromFile(filename);
 	player.setTexture(playerTexture);
+	player.setPosition(640 - player.getGlobalBounds().width/2, 720 - player.getGlobalBounds().height);
 }
 void People::draw() {
 	sf::RenderWindow* window = Factory::getRenderWindow();

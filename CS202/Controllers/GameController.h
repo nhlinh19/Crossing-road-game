@@ -3,11 +3,17 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "../Modules/People.h"
+#include "../Modules/Lane/LaneInterface.h"
+#include "../Modules/Lane/LeftLane.h"
+#include "../Modules/Lane/RightLane.h"
+
 
 class GameController
 {
 private:
 	People player;
+	std::vector<LaneInterface*> lanes;
+
 public:
 	GameController();
 	void start();
@@ -15,7 +21,13 @@ public:
 
 GameController::GameController()
 {
-
+	for (int i = 0; i < 10; i+=2) {
+		lanes.push_back(new LeftLane(i*72));
+		lanes.back()->initialize();
+		
+		lanes.push_back(new RightLane((i+1)*72));
+		lanes.back()->initialize();
+	}
 }
 
 void GameController::start() {
@@ -69,13 +81,17 @@ void GameController::start() {
 					break;
 				}
 				break;
-			defaults:
+			default:
 				break;
 			}
 		}
 		window->clear();
 		player.move();
 		player.draw();
+
+		for (auto& lane : lanes) {
+			lane->draw();
+		}
 		sf::sleep(sf::microseconds(1000));
 		window->display();
 	}

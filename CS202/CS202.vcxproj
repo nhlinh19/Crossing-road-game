@@ -155,9 +155,14 @@
     <ClInclude Include="Modules\Button\ButtonInterface.h" />
     <ClInclude Include="Modules\Button\ExitButton.h" />
     <ClInclude Include="Modules\Button\NewGameButton.h" />
+    <ClInclude Include="Modules\Lane\LaneInterface.h" />
+    <ClInclude Include="Modules\Lane\LeftLane.h" />
+    <ClInclude Include="Modules\Lane\RightLane.h" />
     <ClInclude Include="Modules\People.h" />
     <ClInclude Include="Modules\Vehicle\Car.h" />
+    <ClInclude Include="Modules\Vehicle\CarFactory.h" />
     <ClInclude Include="Modules\Vehicle\VehicleInterface.h" />
+    <ClInclude Include="Utility\RandomMachine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
