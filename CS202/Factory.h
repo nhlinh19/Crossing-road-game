@@ -9,7 +9,7 @@
 class Factory
 {
 private:
-	static sf::RenderWindow *window;
+	static sf::RenderWindow* window;
 	static sf::Font* font;
 
 public:
@@ -32,7 +32,7 @@ sf::Font* Factory::getFont()
 {
 	if (nullptr == Factory::font) {
 		Factory::font = new sf::Font();
-		font->loadFromFile("C:\\Users\\admin\\source\\repos\\CS202\\CS202\\Fonts\\arial.ttf");
+		font->loadFromFile(".\\Fonts\\arial.ttf");
 	}
 	return font;
 }

@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\admin\source\repos\CS202\sfml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Study\In_uni\Year 2\Semester 1\CS202\Final_Project\CS202\sfml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\admin\source\repos\CS202\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\Study\In_uni\Year 2\Semester 1\CS202\Final_Project\CS202\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-system-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -105,14 +105,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\admin\source\repos\CS202\sfml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Study\In_uni\Year 2\Semester 1\CS202\Final_Project\CS202\sfml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\admin\source\repos\CS202\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\Study\In_uni\Year 2\Semester 1\CS202\Final_Project\CS202\sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-system.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -160,7 +160,12 @@
     <ClInclude Include="Modules\Lane\RightLane.h" />
     <ClInclude Include="Modules\People.h" />
     <ClInclude Include="Modules\Vehicle\Car.h" />
+    <ClInclude Include="Modules\Vehicle\Car2.h" />
     <ClInclude Include="Modules\Vehicle\CarFactory.h" />
+    <ClInclude Include="Modules\Vehicle\Dinosaur.h" />
+    <ClInclude Include="Modules\Vehicle\Dog.h" />
+    <ClInclude Include="Modules\Vehicle\Police_car.h" />
+    <ClInclude Include="Modules\Vehicle\Tree.h" />
     <ClInclude Include="Modules\Vehicle\VehicleInterface.h" />
     <ClInclude Include="Utility\RandomMachine.h" />
   </ItemGroup>
