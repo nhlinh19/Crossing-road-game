@@ -1,6 +1,6 @@
 #include <vector>
-#include <SFML/Time.hpp>
-#include <SFML/Clock.hpp>
+#include <SFML/System/Time.hpp>
+#include <SFML/System/Clock.hpp>
 #include <SFML/Graphics.hpp>
 
 class TrafficLight
@@ -20,25 +20,31 @@ private:
 
 public:
     TrafficLight();
-    void initialize();
+    void initialize(int x_from_lane, bool is_left);
     void startClock();
     void updateLight();
     void draw();
 };
 
 TrafficLight::TrafficLight(): 
-    is_red(false), red_time(sf::millisecond(0)), total_time(sf::millisecond(0)) 
+    is_red(false), red_time(0), total_time(0) 
 {
 	//texture.loadFromFile(filename);
 	//sprite.setTexture(texture);    
 }
 
-void TrafficLight::initialize()
+void TrafficLight::initialize(int x_from_lane, bool is_left)
 {
     srand(time(NULL));
-    total_time = total_time_lower_limit + rand(total_time_rand_limit);
-    red_time = red_time_lower_limit + rand(total_time / 2);
+    total_time = total_time_lower_limit + rand() % total_time_rand_limit;
+    red_time = red_time_lower_limit + rand() % (total_time / 2);
     is_red = false;
+
+    startClock();
+    updateLight();
+    //int width = sprite.getTexture()->getSize().x * sprite.getScale().x;
+    int width = sprite.getGlobalBounds().width;
+    sprite.setPosition((is_left)? (1280 - width) : (0 + width),  x_from_lane);
 }
 
 void TrafficLight::startClock()
@@ -48,7 +54,7 @@ void TrafficLight::startClock()
 
 void TrafficLight::updateLight()
 {
-    int cur_time = clk.getElapsedTime().asMillisecond();
+    int cur_time = clk.getElapsedTime().asMilliseconds();
     if (cur_time > total_time) clk.restart();
 
     cur_time %= total_time;
@@ -75,7 +81,5 @@ void TrafficLight::updateLight()
 void TrafficLight::draw()
 {
     sf::RenderWindow *window = Factory::getRenderWindow();
-	
-	updateLight();
-    window->draw(sprite); // get red and green sprit 
+    window->draw(sprite);
 }
