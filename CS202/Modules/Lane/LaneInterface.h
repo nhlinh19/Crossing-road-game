@@ -39,6 +39,7 @@ void LaneInterface::draw() {
 		vehicle->move();
 		window->draw(*vehicle->getSprite());
 	}
+	light.draw();
 }
 
 bool LaneInterface::checkCollision(People& p)

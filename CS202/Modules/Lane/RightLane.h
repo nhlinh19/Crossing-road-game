@@ -46,4 +46,6 @@ void RightLane::update()
 			vehicles.pop_back();
 		}
 	}
+
+	light.updateLight();
 }

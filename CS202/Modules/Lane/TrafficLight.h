@@ -80,7 +80,5 @@ void TrafficLight::updateLight()
 void TrafficLight::draw()
 {
     sf::RenderWindow *window = Factory::getRenderWindow();
-	
-	updateLight();
     window->draw(sprite);
 }
