@@ -50,8 +50,8 @@ bool LaneInterface::checkCollision(People& p)
 	for (auto& vehicle : vehicles)
 		if (player->getGlobalBounds().intersects(
 			vehicle->getSprite()->getGlobalBounds()
-			)
-		)
+		   )
+		   )
 		{
 			return true;
 		}

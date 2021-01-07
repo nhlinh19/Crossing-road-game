@@ -42,7 +42,8 @@ void TrafficLight::initialize(int x_from_lane, bool is_left)
 
     startClock();
     updateLight();
-    int width = sprite.getTexture()->getSize().x * sprite.getScale().x;
+    //int width = sprite.getTexture()->getSize().x * sprite.getScale().x;
+    int width = sprite.getGlobalBounds().width;
     sprite.setPosition((is_left)? (1280 - width) : (0 + width),  x_from_lane);
 }
 
