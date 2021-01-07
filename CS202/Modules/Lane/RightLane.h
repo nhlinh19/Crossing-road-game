@@ -17,6 +17,8 @@ void RightLane::initialize()
 	float speed = static_cast<float>(rand()) / RAND_MAX;
 	velocity = sf::Vector2f(-speed, 0);
 
+	light.initialize(x, false);
+
 	float lastPos = 0;
 	VehicleInterface* vehicle;
 	srand(static_cast<unsigned int> (time(nullptr)));
