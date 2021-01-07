@@ -56,5 +56,5 @@ void People::moveRight() {
 
 sf::Sprite* People::getSprite()
 {
-	return this->player;
+	return &(this->player);
 }
