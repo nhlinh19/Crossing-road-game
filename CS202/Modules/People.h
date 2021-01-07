@@ -21,6 +21,7 @@ public:
 	void moveRight();
 	void moveUp();
 	void moveDown();
+	sf::Sprite* getSprite();
 };
 
 People::People() {
@@ -51,4 +52,9 @@ void People::moveLeft() {
 
 void People::moveRight() {
 	velocity.x += 1.f;
+}
+
+sf::Sprite* People::getSprite()
+{
+	return this->player;
 }
