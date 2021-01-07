@@ -4,6 +4,7 @@
 #include <vector>
 #include "../Modules/Button/ButtonInterface.h"
 #include "../Modules/Button/NewGameButton.h"
+#include "../Modules/Button/LoadGameButton.h"
 
 
 class MenuInterface

@@ -7,7 +7,7 @@ public:
 };
 
 Truck::Truck() {
-	this->filename = ".\\Debug\\truck.png";
+	this->filename = "Images\\truck.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

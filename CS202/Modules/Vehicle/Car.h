@@ -11,7 +11,7 @@ public:
 
 Car::Car()
 {
-	this->filename = ".\\Debug\\car.png";
+	this->filename = "Images\\car.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

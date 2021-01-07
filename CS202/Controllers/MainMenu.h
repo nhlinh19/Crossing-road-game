@@ -12,6 +12,7 @@ public:
 MainMenu::MainMenu()
 {
 	this->buttons.push_back(new NewGameButton(200, 50));
+	this->buttons.push_back(new LoadGameButton(200, 50));
 }
 
 void MainMenu::showMenu()

@@ -8,7 +8,13 @@ public:
 	void update();
 };
 
-Pavement::Pavement(int x) : LaneInterface(x) {}
+Pavement::Pavement(int x) : LaneInterface(x) {
+	texture.loadFromFile("Images//pavement.jpg");
+	//texture.setRepeated(true);
+	rec.setPosition(sf::Vector2f(0.f, x));
+	rec.setSize(sf::Vector2f(1280, 72.f));
+	rec.setTexture(&texture);
+}
 
 void Pavement::initialize() {
 	srand(time(NULL));

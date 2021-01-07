@@ -9,7 +9,13 @@ public:
 	void update();
 };
 
-LeftLane::LeftLane(int x) : LaneInterface(x) {}
+LeftLane::LeftLane(int x) : LaneInterface(x) {
+	texture.loadFromFile("Images//road.jpg");
+	texture.setRepeated(true);
+	rec.setPosition(sf::Vector2f(0.f, x));
+	rec.setSize(sf::Vector2f(1280, 72.f));
+	rec.setTexture(&texture);
+}
 
 void LeftLane::initialize()
 {

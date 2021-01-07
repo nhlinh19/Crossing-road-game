@@ -3,7 +3,7 @@
 #include <deque>
 #include "../Vehicle/CarFactory.h"
 #include "../../Factory.h"
-#include "TrafficLight.h"
+//#include "TrafficLight.h"
 
 class LaneInterface
 {
@@ -15,7 +15,7 @@ protected:
 	int x;
 	
 	bool have_light = 0;
-	TrafficLight light;
+	//TrafficLight light;
 
 public:
 	LaneInterface(int x);
@@ -32,6 +32,7 @@ void LaneInterface::draw() {
 	sf::RenderWindow *window = Factory::getRenderWindow();
 	
 	this->update();
+	window->draw(rec);
 	for (auto& vehicle : vehicles) {
 		vehicle->move();
 		window->draw(*vehicle->getSprite());

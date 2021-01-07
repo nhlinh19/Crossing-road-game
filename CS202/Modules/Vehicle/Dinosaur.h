@@ -8,7 +8,7 @@ public:
 };
 
 Dinosaur::Dinosaur() {
-	this->filename = ".\\Debug\\dinosaur.png";
+	this->filename = "Images\\dinosaur.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

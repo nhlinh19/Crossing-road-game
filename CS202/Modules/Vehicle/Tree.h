@@ -8,7 +8,7 @@ public:
 };
 
 Tree::Tree() {
-	this->filename = ".\\Debug\\tree.png";
+	this->filename = "Images\\tree.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

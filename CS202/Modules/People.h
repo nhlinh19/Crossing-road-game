@@ -7,7 +7,7 @@
 class People
 {
 private:
-	std::string filename = ".\\Debug\\stickman.png";
+	std::string filename = "Images\\stickman.png";
 	sf::Sprite player;
 	sf::Texture playerTexture;
 	sf::Vector2f velocity;
@@ -56,5 +56,5 @@ void People::moveRight() {
 
 sf::Sprite* People::getSprite()
 {
-	return this->player;
+	return &this->player;
 }

@@ -98,5 +98,8 @@
     <ClInclude Include="Modules\Vehicle\Truck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Modules\Button\LoadGameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

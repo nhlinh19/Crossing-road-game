@@ -94,11 +94,11 @@ void GameController::start() {
 		}
 		window->clear();
 		player.move();
-		player.draw();
 
 		for (auto& lane : lanes) {
 			lane->draw();
 		}
+		player.draw();
 		sf::sleep(sf::microseconds(1000));
 		window->display();
 	}
