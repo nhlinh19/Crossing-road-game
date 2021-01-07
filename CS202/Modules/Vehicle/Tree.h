@@ -2,16 +2,13 @@
 
 #include "VehicleInterface.h"
 
-class Car : public VehicleInterface
-{
-
+class Tree : public VehicleInterface {
 public:
-	Car();
+	Tree();
 };
 
-Car::Car()
-{
-	this->filename = ".\\Debug\\car.png";
+Tree::Tree() {
+	this->filename = ".\\Debug\\tree.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

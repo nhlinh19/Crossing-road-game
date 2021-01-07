@@ -1,17 +1,13 @@
 #pragma once
-
 #include "VehicleInterface.h"
 
-class Car : public VehicleInterface
-{
-
+class Truck : public VehicleInterface {
 public:
-	Car();
+	Truck();
 };
 
-Car::Car()
-{
-	this->filename = ".\\Debug\\car.png";
+Truck::Truck() {
+	this->filename = ".\\Debug\\truck.png";
 	texture->loadFromFile(filename);
 	this->sprite = new sf::Sprite();
 	this->sprite->setTexture(*texture);

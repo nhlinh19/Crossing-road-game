@@ -6,6 +6,7 @@
 #include "../Modules/Lane/LaneInterface.h"
 #include "../Modules/Lane/LeftLane.h"
 #include "../Modules/Lane/RightLane.h"
+#include "../Modules/Lane/Pavement.h"
 
 
 class GameController
@@ -21,13 +22,19 @@ public:
 
 GameController::GameController()
 {
-	for (int i = 0; i < 10; i+=2) {
-		lanes.push_back(new LeftLane(i*72));
+	lanes.push_back(new Pavement(0));
+	lanes.back()->initialize();
+
+	for (int i = 1; i < 9; i += 2) {
+		lanes.push_back(new LeftLane(i * 72));
 		lanes.back()->initialize();
-		
-		lanes.push_back(new RightLane((i+1)*72));
+
+		lanes.push_back(new RightLane((i + 1) * 72));
 		lanes.back()->initialize();
 	}
+
+	lanes.push_back(new Pavement(9 * 72));
+	lanes.back()->initialize();
 }
 
 void GameController::start() {
@@ -95,5 +102,5 @@ void GameController::start() {
 		sf::sleep(sf::microseconds(1000));
 		window->display();
 	}
-	
+
 }
