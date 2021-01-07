@@ -157,6 +157,7 @@
     <ClInclude Include="Modules\Button\NewGameButton.h" />
     <ClInclude Include="Modules\Lane\LaneInterface.h" />
     <ClInclude Include="Modules\Lane\LeftLane.h" />
+    <ClInclude Include="Modules\Lane\Pavement.h" />
     <ClInclude Include="Modules\Lane\RightLane.h" />
     <ClInclude Include="Modules\People.h" />
     <ClInclude Include="Modules\Vehicle\Car.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Modules\Vehicle\Dog.h" />
     <ClInclude Include="Modules\Vehicle\Police_car.h" />
     <ClInclude Include="Modules\Vehicle\Tree.h" />
+    <ClInclude Include="Modules\Vehicle\Truck.h" />
     <ClInclude Include="Modules\Vehicle\VehicleInterface.h" />
     <ClInclude Include="Utility\RandomMachine.h" />
   </ItemGroup>

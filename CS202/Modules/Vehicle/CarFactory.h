@@ -7,14 +7,15 @@
 #include "Dog.h"
 #include "Dinosaur.h"
 #include "Tree.h"
+#include "Truck.h"
 enum class VehicleCateglory
 {
 	car,
 	car2,
-	tree,
 	police_car,
 	dinosaur,
 	dog,
+	truck,
 	last
 };
 
@@ -29,14 +30,14 @@ public:
 			return new Car();
 		case VehicleCateglory::car2:
 			return new Car2();
-		case VehicleCateglory::tree:
-			return new Tree();
 		case VehicleCateglory::police_car:
 			return new Police_car();
 		case VehicleCateglory::dinosaur:
 			return new Dinosaur();
 		case VehicleCateglory::dog:
 			return new Dog();
+		case VehicleCateglory::truck:
+			return new Truck();
 		default:
 			throw "Undefined vehicle";
 		}
