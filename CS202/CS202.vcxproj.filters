@@ -101,5 +101,17 @@
     <ClInclude Include="Modules\Button\LoadGameButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Modules\Button\ContinueGameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Button\ExitGameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\Button\SaveGameButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controllers\PauseMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

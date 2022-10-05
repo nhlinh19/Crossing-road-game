@@ -8,6 +8,7 @@
 #include "Dinosaur.h"
 #include "Tree.h"
 #include "Truck.h"
+#include "../../Utility/RandomMachine.h"
 enum class VehicleCateglory
 {
 	car,
@@ -23,7 +24,7 @@ class CarFactory
 {
 public:
 	static VehicleInterface* getRandom() {
-		VehicleCateglory type = static_cast<VehicleCateglory>(rand() % static_cast<int>(VehicleCateglory::last));
+		VehicleCateglory type = static_cast<VehicleCateglory>(random() % static_cast<int>(VehicleCateglory::last));
 
 		switch (type) {
 		case VehicleCateglory::car:

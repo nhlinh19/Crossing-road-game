@@ -5,6 +5,7 @@
 #include "../../Factory.h"
 #include "TrafficLight.h"
 #include "../People.h"
+#include "../../Utility/RandomMachine.h"
 
 class LaneInterface
 {
@@ -20,10 +21,11 @@ protected:
 
 public:
 	LaneInterface(int x);
-	virtual void initialize() = 0;
+	virtual void initialize(int level) = 0;
 	virtual void draw();
-	virtual void update() = 0;
+	virtual void update(int level) = 0;
 
+	void resetVehicles();
 	bool checkCollision(People& p);
 };
 
@@ -34,13 +36,18 @@ LaneInterface::LaneInterface(int x) {
 void LaneInterface::draw() {
 	sf::RenderWindow *window = Factory::getRenderWindow();
 	
-	this->update();
+	//this->update();
 	window->draw(rec);
 	for (auto& vehicle : vehicles) {
 		vehicle->move();
 		window->draw(*vehicle->getSprite());
 	}
 	light.draw();
+}
+
+void LaneInterface::resetVehicles()
+{
+	vehicles.clear();
 }
 
 bool LaneInterface::checkCollision(People& p)
@@ -58,3 +65,4 @@ bool LaneInterface::checkCollision(People& p)
 		}
 	return false;
 }
+
